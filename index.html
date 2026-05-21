@@ -3,25 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>higherwork with TANIA — Leadership Assessment Programs</title>
+  <title>higherwork with TANIA: Leadership Assessment Programs</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Pinyon+Script&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            navy:      '#1B3068',
-            'navy-dk': '#0A1530',
-            'navy-md': '#152550',
-            gold:      '#B5935A',
-            peach:     '#F4B896',
-            cream:     '#F9F4EF',
+            navy:       '#274684',
+            'navy-dk':  '#101c35',
+            'oxford':   '#101c35',
+            gold:       '#c4a573',
+            peach:      '#fec9a8',
+            cream:      '#f9efea',
+            seashell:   '#f9efea',
           },
           fontFamily: {
-            heading: ['"Cormorant Garamond"', 'serif'],
+            heading: ['"Playfair Display"', 'serif'],
+            script:  ['"Pinyon Script"', 'cursive'],
+            sans:    ['Montserrat', 'sans-serif'],
             body:    ['Inter', 'sans-serif'],
           },
         },
@@ -31,21 +34,21 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; background: #0A1530; color: #F9F4EF; overflow-x: hidden; }
+    body { font-family: 'Inter', sans-serif; background: #101c35; color: #f9efea; overflow-x: hidden; }
 
     /* ── Nav ── */
     #main-nav { transition: background 0.4s, box-shadow 0.4s; }
-    #main-nav.scrolled { background: rgba(10,21,48,0.97) !important; backdrop-filter: blur(14px); box-shadow: 0 2px 28px rgba(0,0,0,0.4); }
+    #main-nav.scrolled { background: rgba(16,28,53,0.97) !important; backdrop-filter: blur(14px); box-shadow: 0 2px 28px rgba(0,0,0,0.4); }
 
     /* ── Buttons ── */
     .btn { position: relative; overflow: hidden; display: inline-flex; align-items: center; justify-content: center; gap: 6px; font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: 0.04em; border-radius: 50px; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; font-size: 0.875rem; }
-    .btn-gold  { background: #B5935A; color: #0A1530; padding: 13px 28px; }
-    .btn-peach { background: #F4B896; color: #0A1530; padding: 13px 28px; }
-    .btn-outline { background: transparent; color: #F9F4EF; border: 1.5px solid rgba(249,244,239,0.35); padding: 12px 26px; }
-    .btn-dark  { background: #0A1530; color: #F9F4EF; padding: 13px 28px; }
-    .btn-gold:hover, .btn-peach:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(181,147,90,0.4); }
+    .btn-gold  { background: #c4a573; color: #101c35; padding: 13px 28px; }
+    .btn-peach { background: #fec9a8; color: #101c35; padding: 13px 28px; }
+    .btn-outline { background: transparent; color: #f9efea; border: 1.5px solid rgba(249,244,239,0.35); padding: 12px 26px; }
+    .btn-dark  { background: #101c35; color: #f9efea; padding: 13px 28px; }
+    .btn-gold:hover, .btn-peach:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(196,165,115,0.4); }
     .btn-outline:hover { background: rgba(249,244,239,0.07); transform: translateY(-2px); }
-    .btn-dark:hover { background: #1B3068; transform: translateY(-2px); }
+    .btn-dark:hover { background: #274684; transform: translateY(-2px); }
     .btn::after {
       content: ''; position: absolute; top: -60%; left: -80%; width: 45%; height: 220%;
       background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.36) 45%, rgba(255,255,255,0.52) 50%, rgba(255,255,255,0.36) 55%, transparent 100%);
@@ -54,25 +57,25 @@
     @keyframes btnShine { 0%{left:-80%;opacity:0} 8%{opacity:1} 38%{left:130%;opacity:1} 39%{opacity:0} 100%{left:130%;opacity:0} }
 
     /* ── Section label ── */
-    .eyebrow { font-family: 'Inter', sans-serif; font-size: 0.63rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #B5935A; }
+    .eyebrow { font-family: 'Inter', sans-serif; font-size: 0.63rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #c4a573; }
 
     /* ── Rotating word ── */
-    .rword { display: inline-block; color: #F4B896; white-space: nowrap; }
+    .rword { display: inline-block; color: #fec9a8; white-space: nowrap; }
     .rword.in  { animation: wIn  0.55s cubic-bezier(0.22,0.61,0.36,1) forwards; }
     .rword.out { animation: wOut 0.42s cubic-bezier(0.55,0,1,0.45)    forwards; }
     @keyframes wIn  { from{transform:translateY(28px);opacity:0} to{transform:translateY(0);opacity:1} }
     @keyframes wOut { from{transform:translateY(0);opacity:1}    to{transform:translateY(-28px);opacity:0} }
 
     /* ── Ticker ── */
-    .ticker-outer { overflow: hidden; background: #B5935A; }
+    .ticker-outer { overflow: hidden; background: #c4a573; }
     .ticker-track { display: flex; width: max-content; animation: tickMove 32s linear infinite; }
     .ticker-track:hover { animation-play-state: paused; }
     @keyframes tickMove { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
     /* ── Offer cards ── */
-    .offer-card { background: rgba(27,48,104,0.45); border: 1px solid rgba(181,147,90,0.18); border-radius: 22px; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; }
-    .offer-card:hover { transform: translateY(-7px); border-color: rgba(181,147,90,0.5); box-shadow: 0 24px 56px rgba(0,0,0,0.35); }
-    .offer-card.featured { border-color: rgba(181,147,90,0.45); background: rgba(27,48,104,0.65); }
+    .offer-card { background: rgba(27,48,104,0.45); border: 1px solid rgba(196,165,115,0.18); border-radius: 22px; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; }
+    .offer-card:hover { transform: translateY(-7px); border-color: rgba(196,165,115,0.5); box-shadow: 0 24px 56px rgba(0,0,0,0.35); }
+    .offer-card.featured { border-color: rgba(196,165,115,0.45); background: rgba(27,48,104,0.65); }
 
     /* ── Flip Gallery ── */
     .fg { perspective: 900px; width: 100%; max-width: 460px; margin: 0 auto; }
@@ -86,9 +89,9 @@
     .fg-slide.on { opacity: 1; transform: rotateY(0) scale(1); pointer-events: all; }
     .fg-slide img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
     .fg-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.18); cursor: pointer; transition: background 0.3s, transform 0.3s; border: none; padding: 0; }
-    .fg-dot.on { background: #B5935A; transform: scale(1.35); }
+    .fg-dot.on { background: #c4a573; transform: scale(1.35); }
     .fg-arr { background: none; border: none; color: rgba(255,255,255,0.45); cursor: pointer; font-size: 1.5rem; transition: color 0.2s, transform 0.2s; padding: 4px; line-height: 1; }
-    .fg-arr:hover { color: #B5935A; transform: scale(1.2); }
+    .fg-arr:hover { color: #c4a573; transform: scale(1.2); }
 
     /* ── Testimonial scroll ── */
     .tc { mask-image: linear-gradient(to bottom, transparent, black 12%, black 88%, transparent);
@@ -99,13 +102,13 @@
 
     /* ── Step dot pulse ── */
     .step-dot { position: relative; }
-    .step-dot::before { content:''; position:absolute; inset:-4px; border-radius:50%; border:1px solid rgba(181,147,90,0.3); animation: pulse 2.5s ease-in-out infinite; }
+    .step-dot::before { content:''; position:absolute; inset:-4px; border-radius:50%; border:1px solid rgba(254,201,168,0.4); animation: pulse 2.5s ease-in-out infinite; }
     @keyframes pulse { 0%,100%{transform:scale(1);opacity:0.6} 50%{transform:scale(1.25);opacity:0} }
 
     /* ── Scrollbar ── */
     ::-webkit-scrollbar { width: 5px; }
-    ::-webkit-scrollbar-track { background: #0A1530; }
-    ::-webkit-scrollbar-thumb { background: #B5935A; border-radius: 3px; }
+    ::-webkit-scrollbar-track { background: #101c35; }
+    ::-webkit-scrollbar-thumb { background: #c4a573; border-radius: 3px; }
   </style>
 </head>
 <body>
@@ -113,25 +116,25 @@
 <!-- ═══════════════════════════════════════
      NAV
 ════════════════════════════════════════ -->
-<nav id="main-nav" class="fixed top-0 inset-x-0 z-50 px-6 py-4" style="background:rgba(10,21,48,0.15);backdrop-filter:blur(10px);">
+<nav id="main-nav" class="fixed top-0 inset-x-0 z-50 px-6 py-4" style="background:rgba(16,28,53,0.15);backdrop-filter:blur(10px);">
   <div class="max-w-6xl mx-auto flex items-center justify-between">
 
     <!-- Logo -->
     <a href="#" class="flex items-center gap-2.5 no-underline">
       <svg width="36" height="36" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-        <line x1="20" y1="2"  x2="20" y2="11" stroke="#B5935A" stroke-width="2.8" stroke-linecap="round"/>
-        <line x1="20" y1="29" x2="20" y2="38" stroke="#B5935A" stroke-width="2.8" stroke-linecap="round"/>
-        <line x1="2"  y1="20" x2="11" y2="20" stroke="#B5935A" stroke-width="2.8" stroke-linecap="round"/>
-        <line x1="29" y1="20" x2="38" y2="20" stroke="#B5935A" stroke-width="2.8" stroke-linecap="round"/>
-        <line x1="7"  y1="7"  x2="13" y2="13" stroke="#B5935A" stroke-width="2.8" stroke-linecap="round"/>
-        <line x1="27" y1="27" x2="33" y2="33" stroke="#B5935A" stroke-width="2.8" stroke-linecap="round"/>
-        <line x1="33" y1="7"  x2="27" y2="13" stroke="#B5935A" stroke-width="2.8" stroke-linecap="round"/>
-        <line x1="13" y1="27" x2="7"  y2="33" stroke="#B5935A" stroke-width="2.8" stroke-linecap="round"/>
-        <polygon points="20,8 22.2,18 20,23 17.8,18" fill="#B5935A"/>
+        <line x1="20" y1="2"  x2="20" y2="11" stroke="#c4a573" stroke-width="2.8" stroke-linecap="round"/>
+        <line x1="20" y1="29" x2="20" y2="38" stroke="#c4a573" stroke-width="2.8" stroke-linecap="round"/>
+        <line x1="2"  y1="20" x2="11" y2="20" stroke="#c4a573" stroke-width="2.8" stroke-linecap="round"/>
+        <line x1="29" y1="20" x2="38" y2="20" stroke="#c4a573" stroke-width="2.8" stroke-linecap="round"/>
+        <line x1="7"  y1="7"  x2="13" y2="13" stroke="#c4a573" stroke-width="2.8" stroke-linecap="round"/>
+        <line x1="27" y1="27" x2="33" y2="33" stroke="#c4a573" stroke-width="2.8" stroke-linecap="round"/>
+        <line x1="33" y1="7"  x2="27" y2="13" stroke="#c4a573" stroke-width="2.8" stroke-linecap="round"/>
+        <line x1="13" y1="27" x2="7"  y2="33" stroke="#c4a573" stroke-width="2.8" stroke-linecap="round"/>
+        <polygon points="20,8 22.2,18 20,23 17.8,18" fill="#c4a573"/>
       </svg>
       <div class="flex flex-col leading-none">
-        <span style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:#F9F4EF;letter-spacing:0.06em;">higherwork</span>
-        <span style="font-family:'Inter',sans-serif;font-size:0.52rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:#B5935A;">with TANIA</span>
+        <span style="font-family:'Montserrat',sans-serif;font-size:1.05rem;font-weight:600;color:#f9efea;letter-spacing:0.06em;">higherwork</span>
+        <span style="font-family:'Pinyon Script',cursive;font-size:0.85rem;font-weight:400;letter-spacing:0.05em;color:#c4a573;">with Tania</span>
       </div>
     </a>
 
@@ -140,7 +143,7 @@
       <a href="#assessment" class="text-sm text-white/60 hover:text-gold transition-colors">The Assessment</a>
       <a href="#offers"     class="text-sm text-white/60 hover:text-gold transition-colors">Programs</a>
       <a href="#tania"      class="text-sm text-white/60 hover:text-gold transition-colors">About Tania</a>
-      <a href="#contact"    class="btn btn-gold text-sm px-5 py-2.5">Book a Discovery Call</a>
+      <a href="#contact"    class="btn btn-peach text-sm px-5 py-2.5">Book a Discovery Call</a>
     </div>
 
     <!-- Mobile hamburger -->
@@ -155,7 +158,7 @@
       <a href="#assessment" class="text-sm text-white/65 hover:text-gold" onclick="document.getElementById('mob').classList.add('hidden')">The Assessment</a>
       <a href="#offers"     class="text-sm text-white/65 hover:text-gold" onclick="document.getElementById('mob').classList.add('hidden')">Programs</a>
       <a href="#tania"      class="text-sm text-white/65 hover:text-gold" onclick="document.getElementById('mob').classList.add('hidden')">About Tania</a>
-      <a href="#contact"    class="btn btn-gold text-sm"                  onclick="document.getElementById('mob').classList.add('hidden')">Book a Discovery Call</a>
+      <a href="#contact"    class="btn btn-peach text-sm"                  onclick="document.getElementById('mob').classList.add('hidden')">Book a Discovery Call</a>
     </div>
   </div>
 </nav>
@@ -167,7 +170,7 @@
 <section class="relative min-h-screen flex items-center overflow-hidden" style="background:linear-gradient(140deg,#060e25 0%,#0f1e45 45%,#1b3068 100%);">
 
   <!-- Subtle dot grid -->
-  <div class="absolute inset-0 opacity-[0.04]" style="background-image:radial-gradient(#B5935A 1px,transparent 1px);background-size:52px 52px;"></div>
+  <div class="absolute inset-0 opacity-[0.04]" style="background-image:radial-gradient(#c4a573 1px,transparent 1px);background-size:52px 52px;"></div>
 
   <!-- Tania photo — right side -->
   <div class="absolute right-0 top-0 bottom-0 w-full md:w-[56%] pointer-events-none select-none">
@@ -186,13 +189,13 @@
     <div class="max-w-[560px]">
 
       <!-- Eyebrow pill -->
-      <div class="inline-flex items-center gap-2 mb-7 px-3.5 py-1.5 rounded-full border border-gold/30 bg-gold/10">
-        <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>
-        <span class="eyebrow" style="font-size:0.58rem;">Leadership 360° Assessment</span>
+      <div class="inline-flex items-center gap-2 mb-7 px-3.5 py-1.5 rounded-full border border-peach/35 bg-peach/10">
+        <span class="w-1.5 h-1.5 rounded-full bg-peach flex-shrink-0"></span>
+        <span class="eyebrow" style="font-size:0.58rem;color:#fec9a8;">Leadership 360° Assessment</span>
       </div>
 
       <!-- Headline -->
-      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,6vw,4.8rem);font-weight:700;line-height:1.08;color:#F9F4EF;margin-bottom:1.4rem;">
+      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(1.9rem,6vw,4.8rem);font-weight:700;line-height:1.08;color:#f9efea;margin-bottom:1.4rem;">
         Do you know how<br>
         your team truly<br>
         <span class="rword in" id="rword">experiences you?</span>
@@ -218,11 +221,6 @@
     </div>
   </div>
 
-  <!-- Scroll cue -->
-  <div class="absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-35 pointer-events-none">
-    <span style="font-size:0.58rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.5);">scroll</span>
-    <div class="w-px h-8" style="background:linear-gradient(to bottom,rgba(255,255,255,0.5),transparent);"></div>
-  </div>
 </section>
 
 
@@ -263,28 +261,28 @@
 <!-- ═══════════════════════════════════════
      THE PROBLEM
 ════════════════════════════════════════ -->
-<section class="py-22 px-6" style="background:#0A1530;">
+<section class="pt-32 pb-20 px-6" style="background:#101c35;">
   <div class="max-w-5xl mx-auto">
     <div class="text-center mb-14">
       <p class="eyebrow mb-3">The Problem</p>
-      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.1rem);font-weight:600;color:#F9F4EF;">Leaders are flying blind</h2>
-      <p class="text-white/50 mt-4 max-w-md mx-auto text-sm leading-relaxed">Real leadership data is rare. Most feedback is filtered, softened — or simply never given.</p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.1rem);font-weight:600;color:#f9efea;">Leaders are flying blind</h2>
+      <p class="text-white/50 mt-4 max-w-md mx-auto text-sm leading-relaxed">Real leadership data is rare. Most feedback is filtered, softened, or simply never given.</p>
     </div>
     <div class="grid md:grid-cols-3 gap-5">
       <div class="p-7 rounded-2xl border border-white/7 bg-white/[0.03] hover:border-gold/30 transition-colors group">
-        <div class="text-3xl mb-4">🔍</div>
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:#F4B896;margin-bottom:0.6rem;">No Objective Data</h3>
+        <div class="mb-4"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fec9a8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg></div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:600;color:#fec9a8;margin-bottom:0.6rem;">No Objective Data</h3>
         <p class="text-white/50 text-sm leading-relaxed">Performance reviews and hallway chats don't give you the honest, structured view of how you're actually showing up as a leader.</p>
       </div>
       <div class="p-7 rounded-2xl border border-white/7 bg-white/[0.03] hover:border-gold/30 transition-colors">
-        <div class="text-3xl mb-4">🪟</div>
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:#F4B896;margin-bottom:0.6rem;">Blind Spots Stay Hidden</h3>
-        <p class="text-white/50 text-sm leading-relaxed">Your team sees things you can't. Without a safe, anonymous channel, those insights never reach you — and the gap keeps growing.</p>
+        <div class="mb-4"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fec9a8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/><line x1="3" y1="3" x2="21" y2="21"/></svg></div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:600;color:#fec9a8;margin-bottom:0.6rem;">Blind Spots Stay Hidden</h3>
+        <p class="text-white/50 text-sm leading-relaxed">Your team sees things you can't. Without a safe, anonymous channel, those insights never reach you, and the gap keeps growing.</p>
       </div>
       <div class="p-7 rounded-2xl border border-white/7 bg-white/[0.03] hover:border-gold/30 transition-colors">
-        <div class="text-3xl mb-4">📊</div>
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:#F4B896;margin-bottom:0.6rem;">Coaching Without Context</h3>
-        <p class="text-white/50 text-sm leading-relaxed">Generic development plans don't move the needle. Real growth requires knowing exactly where you stand — and where others need you to be.</p>
+        <div class="mb-4"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fec9a8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:600;color:#fec9a8;margin-bottom:0.6rem;">Coaching Without Context</h3>
+        <p class="text-white/50 text-sm leading-relaxed">Generic development plans don't move the needle. Real growth requires knowing exactly where you stand, and where others need you to be.</p>
       </div>
     </div>
   </div>
@@ -294,59 +292,59 @@
 <!-- ═══════════════════════════════════════
      THE ASSESSMENT
 ════════════════════════════════════════ -->
-<section id="assessment" class="py-24 px-6" style="background:linear-gradient(180deg,#0A1530 0%,#1B3068 100%);">
+<section id="assessment" class="py-24 px-6" style="background:linear-gradient(180deg,#101c35 0%,#274684 100%);">
   <div class="max-w-5xl mx-auto">
     <div class="grid md:grid-cols-2 gap-14 items-center">
 
       <!-- Left: copy -->
       <div>
         <p class="eyebrow mb-3">The Tool</p>
-        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:600;color:#F9F4EF;line-height:1.15;margin-bottom:1.25rem;">
+        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:600;color:#f9efea;line-height:1.15;margin-bottom:1.25rem;">
           The Leadership Circle Profile
         </h2>
         <p class="text-white/60 leading-relaxed mb-5 text-sm">
           The Leadership Circle Profile is the world's most advanced 360° leadership assessment. It gives your team, your colleagues, and even your boss a structured, anonymous channel to share how they actually experience your leadership.
         </p>
         <p class="text-white/60 leading-relaxed mb-5 text-sm">
-          You assess yourself too. The result is a rich data graphic showing your effectiveness across 30+ dimensions — vision, strategy, relationships, team building, and more — and it reveals exactly where your self-perception diverges from reality.
+          You assess yourself too. The result is a rich data graphic showing your effectiveness across 30+ dimensions: vision, strategy, relationships, team building, and more. It reveals exactly where your self-perception diverges from reality.
         </p>
         <p class="text-white/60 leading-relaxed text-sm">
           That gap is where the most powerful coaching happens.
         </p>
         <div class="mt-8 p-5 rounded-2xl border border-gold/25 bg-gold/8">
-          <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:#F4B896;line-height:1.6;">
+          <p style="font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;color:#fec9a8;line-height:1.6;">
             &ldquo;This assessment was one of the most insightful things I&rsquo;ve ever experienced in my career.&rdquo;
           </p>
-          <p class="text-white/35 text-xs mt-2 font-medium">— A sentiment Tania&rsquo;s clients share, consistently</p>
+          <p class="text-white/35 text-xs mt-2 font-medium">A sentiment Tania&rsquo;s clients share, consistently</p>
         </div>
       </div>
 
       <!-- Right: feature tiles -->
       <div class="grid grid-cols-2 gap-4">
         <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/8 flex flex-col gap-3">
-          <span class="text-2xl">🔒</span>
-          <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:#F9F4EF;">Anonymous Feedback</h4>
-          <p class="text-white/45 text-xs leading-relaxed">Team members respond with complete honesty — their names are never attached to their answers.</p>
+          <div class="w-8 h-8 flex items-center justify-center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c4a573" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+          <h4 style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:#f9efea;">Anonymous Feedback</h4>
+          <p class="text-white/45 text-xs leading-relaxed">Team members respond with complete honesty; their names are never attached to their answers.</p>
         </div>
         <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/8 flex flex-col gap-3">
-          <span class="text-2xl">📐</span>
-          <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:#F9F4EF;">30+ Dimensions</h4>
-          <p class="text-white/45 text-xs leading-relaxed">Vision, strategy, team building, relationships, purpose, results — all measured and mapped.</p>
+          <div class="w-8 h-8 flex items-center justify-center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c4a573" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+          <h4 style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:#f9efea;">30+ Dimensions</h4>
+          <p class="text-white/45 text-xs leading-relaxed">Vision, strategy, team building, relationships, purpose, results. All measured and mapped.</p>
         </div>
         <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/8 flex flex-col gap-3">
-          <span class="text-2xl">🪞</span>
-          <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:#F9F4EF;">The Self-Gap</h4>
+          <div class="w-8 h-8 flex items-center justify-center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c4a573" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h4 style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:#f9efea;">The Self-Gap</h4>
           <p class="text-white/45 text-xs leading-relaxed">See exactly where how you see yourself diverges from how your team experiences you.</p>
         </div>
         <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/8 flex flex-col gap-3">
-          <span class="text-2xl">📈</span>
-          <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:#F9F4EF;">Actionable Output</h4>
-          <p class="text-white/45 text-xs leading-relaxed">A visual report that pinpoints exactly what to focus on and where to grow — no guessing.</p>
+          <div class="w-8 h-8 flex items-center justify-center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c4a573" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+          <h4 style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:#f9efea;">Actionable Output</h4>
+          <p class="text-white/45 text-xs leading-relaxed">A visual report that pinpoints exactly what to focus on and where to grow. No guessing.</p>
         </div>
         <div class="col-span-2 p-5 rounded-2xl bg-gold/10 border border-gold/25 flex items-center gap-4">
-          <span class="text-2xl flex-shrink-0">👥</span>
+          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c4a573" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
           <div>
-            <h4 style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:#F4B896;">Teams of 5 or More</h4>
+            <h4 style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:#fec9a8;">Teams of 5 or More</h4>
             <p class="text-white/45 text-xs mt-1 leading-relaxed">This assessment is designed for leaders with at least 5 direct reports or colleagues who can participate.</p>
           </div>
         </div>
@@ -359,53 +357,53 @@
 <!-- ═══════════════════════════════════════
      HOW IT WORKS
 ════════════════════════════════════════ -->
-<section class="py-24 px-6" style="background:#0A1530;">
+<section class="py-24 px-6" style="background:#101c35;">
   <div class="max-w-2xl mx-auto">
     <div class="text-center mb-14">
-      <p class="eyebrow mb-3">The Process</p>
-      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:600;color:#F9F4EF;">How it works</h2>
+      <p class="eyebrow mb-3" style="color:#fec9a8;">The Process</p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:600;color:#f9efea;">How it works</h2>
     </div>
 
-    <div class="relative pl-12" style="border-left:2px solid;border-image:linear-gradient(to bottom,#B5935A,rgba(181,147,90,0.12)) 1;">
+    <div class="relative pl-12" style="border-left:2px solid;border-image:linear-gradient(to bottom,#c4a573,rgba(196,165,115,0.12)) 1;">
       <div class="space-y-10">
 
         <!-- Step 1 -->
         <div class="relative">
-          <div class="step-dot absolute -left-[2.6rem] w-10 h-10 rounded-full bg-navy-dk border-2 border-gold flex items-center justify-center text-gold font-bold text-sm flex-shrink-0" style="top:0;">1</div>
+          <div class="step-dot absolute -left-[2.6rem] w-10 h-10 rounded-full bg-navy-dk border-2 border-peach flex items-center justify-center text-peach font-bold text-sm flex-shrink-0" style="top:0;">1</div>
           <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/7">
             <p class="eyebrow mb-1.5">Step 1</p>
-            <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:#F9F4EF;margin-bottom:0.5rem;">Discovery Call</h3>
-            <p class="text-white/50 text-sm leading-relaxed">We start with a real conversation — your leadership context, your team dynamics, your challenges and goals. This sets the foundation for a debrief that actually lands.</p>
+            <h3 style="font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:600;color:#f9efea;margin-bottom:0.5rem;">Discovery Call</h3>
+            <p class="text-white/50 text-sm leading-relaxed">We start with a real conversation about your leadership context, your team dynamics, your challenges and goals. This sets the foundation for a debrief that actually lands.</p>
           </div>
         </div>
 
         <!-- Step 2 -->
         <div class="relative">
-          <div class="step-dot absolute -left-[2.6rem] w-10 h-10 rounded-full bg-navy-dk border-2 border-gold flex items-center justify-center text-gold font-bold text-sm flex-shrink-0" style="top:0;">2</div>
+          <div class="step-dot absolute -left-[2.6rem] w-10 h-10 rounded-full bg-navy-dk border-2 border-peach flex items-center justify-center text-peach font-bold text-sm flex-shrink-0" style="top:0;">2</div>
           <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/7">
-            <p class="eyebrow mb-1.5" style="color:#F4B896;">~2 Weeks</p>
-            <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:#F9F4EF;margin-bottom:0.5rem;">The Assessment Goes Out</h3>
-            <p class="text-white/50 text-sm leading-relaxed">Your team members receive the anonymous Leadership Circle Profile. Your boss receives a non-anonymous version. You complete your own self-assessment. The data accumulates quietly — candidly.</p>
+            <p class="eyebrow mb-1.5" style="color:#fec9a8;">~2 Weeks</p>
+            <h3 style="font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:600;color:#f9efea;margin-bottom:0.5rem;">The Assessment Goes Out</h3>
+            <p class="text-white/50 text-sm leading-relaxed">Your team members receive the anonymous Leadership Circle Profile. Your boss receives a non-anonymous version. You complete your own self-assessment. The data accumulates quietly, candidly.</p>
           </div>
         </div>
 
         <!-- Step 3 -->
         <div class="relative">
-          <div class="step-dot absolute -left-[2.6rem] w-10 h-10 rounded-full bg-navy-dk border-2 border-gold flex items-center justify-center text-gold font-bold text-sm flex-shrink-0" style="top:0;">3</div>
+          <div class="step-dot absolute -left-[2.6rem] w-10 h-10 rounded-full bg-navy-dk border-2 border-peach flex items-center justify-center text-peach font-bold text-sm flex-shrink-0" style="top:0;">3</div>
           <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/7">
             <p class="eyebrow mb-1.5">The Debrief</p>
-            <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:#F9F4EF;margin-bottom:0.5rem;">We unpack the data together</h3>
-            <p class="text-white/50 text-sm leading-relaxed">We walk through your full Leadership Circle Profile report — your strengths, your blind spots, and the gap between how you see yourself and how your team experiences you. This session alone changes things.</p>
+            <h3 style="font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:600;color:#f9efea;margin-bottom:0.5rem;">We unpack the data together</h3>
+            <p class="text-white/50 text-sm leading-relaxed">We walk through your full Leadership Circle Profile report: your strengths, your blind spots, and the gap between how you see yourself and how your team experiences you. This session alone changes things.</p>
           </div>
         </div>
 
         <!-- Step 4 -->
         <div class="relative">
-          <div class="step-dot absolute -left-[2.6rem] w-10 h-10 rounded-full bg-navy-dk border-2 border-gold flex items-center justify-center text-gold font-bold text-sm flex-shrink-0" style="top:0;">4</div>
+          <div class="step-dot absolute -left-[2.6rem] w-10 h-10 rounded-full bg-navy-dk border-2 border-peach flex items-center justify-center text-peach font-bold text-sm flex-shrink-0" style="top:0;">4</div>
           <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/7">
             <p class="eyebrow mb-1.5">Action Plan</p>
-            <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:#F9F4EF;margin-bottom:0.5rem;">You leave with clarity and a concrete path</h3>
-            <p class="text-white/50 text-sm leading-relaxed">We translate the data into specific, actionable next steps. You'll know exactly what to change, what to protect, and where your biggest growth opportunity is — right now.</p>
+            <h3 style="font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:600;color:#f9efea;margin-bottom:0.5rem;">You leave with clarity and a concrete path</h3>
+            <p class="text-white/50 text-sm leading-relaxed">We translate the data into specific, actionable next steps. You'll know exactly what to change, what to protect, and where your biggest growth opportunity is, right now.</p>
           </div>
         </div>
 
@@ -418,22 +416,22 @@
 <!-- ═══════════════════════════════════════
      THE OFFERS
 ════════════════════════════════════════ -->
-<section id="offers" class="py-24 px-6" style="background:linear-gradient(180deg,#0A1530 0%,#152550 100%);">
+<section id="offers" class="py-24 px-6" style="background:linear-gradient(180deg,#101c35 0%,#101c35 100%);">
   <div class="max-w-5xl mx-auto">
     <div class="text-center mb-14">
       <p class="eyebrow mb-3">Choose Your Path</p>
-      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:600;color:#F9F4EF;">Two ways to gain clarity</h2>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:600;color:#f9efea;">Two ways to gain clarity</h2>
       <p class="text-white/50 mt-4 max-w-sm mx-auto text-sm leading-relaxed">No long-term commitment required. Start with what you need.</p>
     </div>
 
     <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
 
       <!-- Card 1: The Leadership Mirror -->
-      <div class="offer-card p-9 flex flex-col">
-        <div class="w-12 h-12 rounded-2xl bg-gold/12 border border-gold/25 flex items-center justify-center text-2xl mb-5">🪞</div>
-        <p class="eyebrow mb-2">3 Sessions</p>
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#F9F4EF;margin-bottom:0.75rem;line-height:1.1;">The Leadership Mirror</h3>
-        <p class="text-white/50 text-sm leading-relaxed mb-7">A focused deep dive into your leadership effectiveness. Walk away with complete clarity on how your team experiences you — and exactly where to grow.</p>
+      <div class="offer-card p-9 flex flex-col" style="border-top:2px solid rgba(254,201,168,0.5);">
+        <div class="w-12 h-12 rounded-2xl bg-peach/12 border border-peach/30 flex items-center justify-center mb-5"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fec9a8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <p class="eyebrow mb-2" style="color:#fec9a8;">3 Sessions</p>
+        <h3 style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#f9efea;margin-bottom:0.75rem;line-height:1.1;">The Leadership Mirror</h3>
+        <p class="text-white/50 text-sm leading-relaxed mb-7">A focused deep dive into your leadership effectiveness. Walk away with complete clarity on how your team experiences you, and exactly where to grow.</p>
         <div class="space-y-3 mb-9 flex-1">
           <div class="flex items-start gap-3"><span class="text-gold flex-shrink-0 text-sm mt-0.5">✓</span><p class="text-white/60 text-sm">Discovery call to understand your leadership context</p></div>
           <div class="flex items-start gap-3"><span class="text-gold flex-shrink-0 text-sm mt-0.5">✓</span><p class="text-white/60 text-sm">Leadership Circle Profile sent to your full team (~2 weeks)</p></div>
@@ -446,11 +444,11 @@
 
       <!-- Card 2: Leadership Mastery -->
       <div class="offer-card featured p-9 flex flex-col relative overflow-hidden">
-        <div class="absolute top-4 right-4 px-3 py-1 rounded-full text-[0.65rem] font-bold bg-gold text-navy-dk tracking-wide">Go Deeper</div>
-        <div class="w-12 h-12 rounded-2xl bg-peach/12 border border-peach/25 flex items-center justify-center text-2xl mb-5">🚀</div>
-        <p class="eyebrow mb-2" style="color:#F4B896;">6 Sessions</p>
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#F9F4EF;margin-bottom:0.75rem;line-height:1.1;">Leadership Mastery</h3>
-        <p class="text-white/50 text-sm leading-relaxed mb-7">Everything in The Leadership Mirror, plus ongoing coaching to implement what you learn — and sustain real, measurable behavioral change.</p>
+        <div class="absolute top-4 right-4 px-3 py-1 rounded-full text-[0.65rem] font-bold bg-peach text-navy-dk tracking-wide">Go Deeper</div>
+        <div class="w-12 h-12 rounded-2xl bg-peach/12 border border-peach/25 flex items-center justify-center mb-5"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fec9a8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p class="eyebrow mb-2" style="color:#fec9a8;">6 Sessions</p>
+        <h3 style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#f9efea;margin-bottom:0.75rem;line-height:1.1;">Leadership Mastery</h3>
+        <p class="text-white/50 text-sm leading-relaxed mb-7">Everything in The Leadership Mirror, plus ongoing coaching to implement what you learn and sustain real, measurable behavioral change.</p>
         <div class="space-y-3 mb-9 flex-1">
           <div class="flex items-start gap-3"><span class="text-peach flex-shrink-0 text-sm mt-0.5">✓</span><p class="text-white/60 text-sm">Everything included in The Leadership Mirror</p></div>
           <div class="flex items-start gap-3"><span class="text-peach flex-shrink-0 text-sm mt-0.5">✓</span><p class="text-white/60 text-sm">3 additional coaching sessions to implement your plan</p></div>
@@ -470,12 +468,12 @@
 <!-- ═══════════════════════════════════════
      TESTIMONIALS
 ════════════════════════════════════════ -->
-<section class="py-24 px-6" style="background:#06101f;overflow:hidden;">
+<section class="py-24 px-6" style="background:#101c35;overflow:hidden;">
   <div class="max-w-6xl mx-auto">
     <div class="text-center mb-14">
-      <p class="eyebrow mb-3">Client Results</p>
-      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:600;color:#F9F4EF;margin-bottom:0.75rem;">Real people. Real breakthroughs.</h2>
-      <p class="text-white/35 text-xs tracking-wider">Real messages from real clients — unedited.</p>
+      <p class="eyebrow mb-3" style="color:#fec9a8;">Client Results</p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:600;color:#f9efea;margin-bottom:0.75rem;">Real people. Real breakthroughs.</h2>
+      <p class="text-white/35 text-xs tracking-wider">Real messages from real clients, unedited.</p>
     </div>
 
     <div class="grid md:grid-cols-3 gap-5" style="height:520px;overflow:hidden;">
@@ -485,15 +483,15 @@
         <div class="tt flex flex-col gap-4" style="--d:30s;">
           <!-- 4 cards -->
           <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/7 flex-shrink-0">
-            <p class="text-gold text-3xl leading-none mb-2" style="font-family:Georgia,serif;">&ldquo;</p>
-            <p class="text-white/70 text-sm leading-relaxed mb-4">In six weeks, we completed work that could have taken me at least 2–3 years on my own.</p>
+            <p class="text-peach text-3xl leading-none mb-2" style="font-family:'Playfair Display',serif;">&ldquo;</p>
+            <p class="text-white/70 text-sm leading-relaxed mb-4">In six weeks, we completed work that could have taken me at least 2 to 3 years on my own.</p>
             <div class="flex items-center gap-3">
               <img src="https://cdn.prod.website-files.com/67263eab4db468f41561a030/673cd5b6a8218852ce9d7e0b_1630932509788.jpeg" alt="Joy Mukiri" class="w-9 h-9 rounded-full object-cover" loading="lazy"/>
               <div><p class="text-white/75 text-xs font-semibold">Joy Mukiri</p><p class="text-white/30 text-xs">Business Leader</p></div>
             </div>
           </div>
           <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/7 flex-shrink-0">
-            <p class="text-gold text-3xl leading-none mb-2" style="font-family:Georgia,serif;">&ldquo;</p>
+            <p class="text-peach text-3xl leading-none mb-2" style="font-family:'Playfair Display',serif;">&ldquo;</p>
             <p class="text-white/70 text-sm leading-relaxed mb-4">I am thrilled with the outcomes. The clarity I gained about my leadership style was transformational.</p>
             <div class="flex items-center gap-3">
               <img src="https://cdn.prod.website-files.com/67263eab4db468f41561a030/673ce80eae363dbd785052a8_Igor%20Zaystev.jpeg" alt="Igor Zaystev" class="w-9 h-9 rounded-full object-cover" loading="lazy"/>
@@ -501,7 +499,7 @@
             </div>
           </div>
           <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/7 flex-shrink-0">
-            <p class="text-gold text-3xl leading-none mb-2" style="font-family:Georgia,serif;">&ldquo;</p>
+            <p class="text-peach text-3xl leading-none mb-2" style="font-family:'Playfair Display',serif;">&ldquo;</p>
             <p class="text-white/70 text-sm leading-relaxed mb-4">Each session with her is literally mind-blowing. I leave every call with more insight than I thought possible.</p>
             <div class="flex items-center gap-3">
               <img src="https://cdn.prod.website-files.com/67263eab4db468f41561a030/673cda7697a6ff1090fb34d3_Yechiel%20Steinberg%2C.jpeg" alt="Yechiel Steinberg" class="w-9 h-9 rounded-full object-cover" loading="lazy"/>
@@ -509,7 +507,7 @@
             </div>
           </div>
           <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/7 flex-shrink-0">
-            <p class="text-gold text-3xl leading-none mb-2" style="font-family:Georgia,serif;">&ldquo;</p>
+            <p class="text-peach text-3xl leading-none mb-2" style="font-family:'Playfair Display',serif;">&ldquo;</p>
             <p class="text-white/70 text-sm leading-relaxed mb-4">She helped me plan a clear roadmap for every business stage. I finally know exactly where I&rsquo;m going.</p>
             <div class="flex items-center gap-3">
               <img src="https://cdn.prod.website-files.com/67263eab4db468f41561a030/674e27de5878a45fc3aa7219_avatar.jpg" alt="Mindel Keller" class="w-9 h-9 rounded-full object-cover" loading="lazy"/>
@@ -518,15 +516,15 @@
           </div>
           <!-- duplicate -->
           <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/7 flex-shrink-0">
-            <p class="text-gold text-3xl leading-none mb-2" style="font-family:Georgia,serif;">&ldquo;</p>
-            <p class="text-white/70 text-sm leading-relaxed mb-4">In six weeks, we completed work that could have taken me at least 2–3 years on my own.</p>
+            <p class="text-peach text-3xl leading-none mb-2" style="font-family:'Playfair Display',serif;">&ldquo;</p>
+            <p class="text-white/70 text-sm leading-relaxed mb-4">In six weeks, we completed work that could have taken me at least 2 to 3 years on my own.</p>
             <div class="flex items-center gap-3">
               <img src="https://cdn.prod.website-files.com/67263eab4db468f41561a030/673cd5b6a8218852ce9d7e0b_1630932509788.jpeg" alt="Joy Mukiri" class="w-9 h-9 rounded-full object-cover" loading="lazy"/>
               <div><p class="text-white/75 text-xs font-semibold">Joy Mukiri</p><p class="text-white/30 text-xs">Business Leader</p></div>
             </div>
           </div>
           <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/7 flex-shrink-0">
-            <p class="text-gold text-3xl leading-none mb-2" style="font-family:Georgia,serif;">&ldquo;</p>
+            <p class="text-peach text-3xl leading-none mb-2" style="font-family:'Playfair Display',serif;">&ldquo;</p>
             <p class="text-white/70 text-sm leading-relaxed mb-4">I am thrilled with the outcomes. The clarity I gained about my leadership style was transformational.</p>
             <div class="flex items-center gap-3">
               <img src="https://cdn.prod.website-files.com/67263eab4db468f41561a030/673ce80eae363dbd785052a8_Igor%20Zaystev.jpeg" alt="Igor Zaystev" class="w-9 h-9 rounded-full object-cover" loading="lazy"/>
@@ -534,7 +532,7 @@
             </div>
           </div>
           <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/7 flex-shrink-0">
-            <p class="text-gold text-3xl leading-none mb-2" style="font-family:Georgia,serif;">&ldquo;</p>
+            <p class="text-peach text-3xl leading-none mb-2" style="font-family:'Playfair Display',serif;">&ldquo;</p>
             <p class="text-white/70 text-sm leading-relaxed mb-4">Each session with her is literally mind-blowing. I leave every call with more insight than I thought possible.</p>
             <div class="flex items-center gap-3">
               <img src="https://cdn.prod.website-files.com/67263eab4db468f41561a030/673cda7697a6ff1090fb34d3_Yechiel%20Steinberg%2C.jpeg" alt="Yechiel Steinberg" class="w-9 h-9 rounded-full object-cover" loading="lazy"/>
@@ -542,7 +540,7 @@
             </div>
           </div>
           <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/7 flex-shrink-0">
-            <p class="text-gold text-3xl leading-none mb-2" style="font-family:Georgia,serif;">&ldquo;</p>
+            <p class="text-peach text-3xl leading-none mb-2" style="font-family:'Playfair Display',serif;">&ldquo;</p>
             <p class="text-white/70 text-sm leading-relaxed mb-4">She helped me plan a clear roadmap for every business stage. I finally know exactly where I&rsquo;m going.</p>
             <div class="flex items-center gap-3">
               <img src="https://cdn.prod.website-files.com/67263eab4db468f41561a030/674e27de5878a45fc3aa7219_avatar.jpg" alt="Mindel Keller" class="w-9 h-9 rounded-full object-cover" loading="lazy"/>
@@ -556,7 +554,7 @@
       <div class="tc hidden md:block">
         <div class="tt flex flex-col gap-4" style="--d:40s;animation-delay:-9s;">
           <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/7 flex-shrink-0">
-            <p class="text-gold text-3xl leading-none mb-2" style="font-family:Georgia,serif;">&ldquo;</p>
+            <p class="text-peach text-3xl leading-none mb-2" style="font-family:'Playfair Display',serif;">&ldquo;</p>
             <p class="text-white/70 text-sm leading-relaxed mb-4">Tania has a unique ability to see right to the heart of what&rsquo;s holding you back and give you the tools to move forward.</p>
             <div class="flex items-center gap-3">
               <img src="https://cdn.prod.website-files.com/67263eab4db468f41561a030/6748ee1fca43c085e0ca3848_Zalmi%20Duchman.jpeg" alt="Zalmi Duchman" class="w-9 h-9 rounded-full object-cover" loading="lazy"/>
@@ -564,7 +562,7 @@
             </div>
           </div>
           <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/7 flex-shrink-0">
-            <p class="text-gold text-3xl leading-none mb-2" style="font-family:Georgia,serif;">&ldquo;</p>
+            <p class="text-peach text-3xl leading-none mb-2" style="font-family:'Playfair Display',serif;">&ldquo;</p>
             <p class="text-white/70 text-sm leading-relaxed mb-4">Working with Tania completely changed how I approach leading my team. The results spoke for themselves within weeks.</p>
             <div class="flex items-center gap-3">
               <img src="https://cdn.prod.website-files.com/67263eab4db468f41561a030/6748edc0783e16c39a8bcdac_Amina%20Darwish.jpeg" alt="Amina Darwish" class="w-9 h-9 rounded-full object-cover" loading="lazy"/>
@@ -572,7 +570,7 @@
             </div>
           </div>
           <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/7 flex-shrink-0">
-            <p class="text-gold text-3xl leading-none mb-2" style="font-family:Georgia,serif;">&ldquo;</p>
+            <p class="text-peach text-3xl leading-none mb-2" style="font-family:'Playfair Display',serif;">&ldquo;</p>
             <p class="text-white/70 text-sm leading-relaxed mb-4">I learned more about my leadership in three sessions with Tania than in 10 years of my corporate career.</p>
             <div class="flex items-center gap-3">
               <img src="https://cdn.prod.website-files.com/67263eab4db468f41561a030/67474782ccb75b8c5c204bb1_Yaffa%20Garfinkel.jpg" alt="Yaffa Garfinkel" class="w-9 h-9 rounded-full object-cover" loading="lazy"/>
@@ -580,7 +578,7 @@
             </div>
           </div>
           <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/7 flex-shrink-0">
-            <p class="text-gold text-3xl leading-none mb-2" style="font-family:Georgia,serif;">&ldquo;</p>
+            <p class="text-peach text-3xl leading-none mb-2" style="font-family:'Playfair Display',serif;">&ldquo;</p>
             <p class="text-white/70 text-sm leading-relaxed mb-4">The assessment data was a game-changer. I finally understood exactly how my team perceived my decisions. Invaluable.</p>
             <div class="flex items-center gap-3">
               <img src="https://cdn.prod.website-files.com/67263eab4db468f41561a030/673cf4347e08c26f2087b4f4_Eli%20Cohen.jpeg" alt="Eli Cohen" class="w-9 h-9 rounded-full object-cover" loading="lazy"/>
@@ -589,7 +587,7 @@
           </div>
           <!-- duplicate -->
           <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/7 flex-shrink-0">
-            <p class="text-gold text-3xl leading-none mb-2" style="font-family:Georgia,serif;">&ldquo;</p>
+            <p class="text-peach text-3xl leading-none mb-2" style="font-family:'Playfair Display',serif;">&ldquo;</p>
             <p class="text-white/70 text-sm leading-relaxed mb-4">Tania has a unique ability to see right to the heart of what&rsquo;s holding you back and give you the tools to move forward.</p>
             <div class="flex items-center gap-3">
               <img src="https://cdn.prod.website-files.com/67263eab4db468f41561a030/6748ee1fca43c085e0ca3848_Zalmi%20Duchman.jpeg" alt="Zalmi Duchman" class="w-9 h-9 rounded-full object-cover" loading="lazy"/>
@@ -597,7 +595,7 @@
             </div>
           </div>
           <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/7 flex-shrink-0">
-            <p class="text-gold text-3xl leading-none mb-2" style="font-family:Georgia,serif;">&ldquo;</p>
+            <p class="text-peach text-3xl leading-none mb-2" style="font-family:'Playfair Display',serif;">&ldquo;</p>
             <p class="text-white/70 text-sm leading-relaxed mb-4">Working with Tania completely changed how I approach leading my team. The results spoke for themselves within weeks.</p>
             <div class="flex items-center gap-3">
               <img src="https://cdn.prod.website-files.com/67263eab4db468f41561a030/6748edc0783e16c39a8bcdac_Amina%20Darwish.jpeg" alt="Amina Darwish" class="w-9 h-9 rounded-full object-cover" loading="lazy"/>
@@ -605,7 +603,7 @@
             </div>
           </div>
           <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/7 flex-shrink-0">
-            <p class="text-gold text-3xl leading-none mb-2" style="font-family:Georgia,serif;">&ldquo;</p>
+            <p class="text-peach text-3xl leading-none mb-2" style="font-family:'Playfair Display',serif;">&ldquo;</p>
             <p class="text-white/70 text-sm leading-relaxed mb-4">I learned more about my leadership in three sessions with Tania than in 10 years of my corporate career.</p>
             <div class="flex items-center gap-3">
               <img src="https://cdn.prod.website-files.com/67263eab4db468f41561a030/67474782ccb75b8c5c204bb1_Yaffa%20Garfinkel.jpg" alt="Yaffa Garfinkel" class="w-9 h-9 rounded-full object-cover" loading="lazy"/>
@@ -613,7 +611,7 @@
             </div>
           </div>
           <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/7 flex-shrink-0">
-            <p class="text-gold text-3xl leading-none mb-2" style="font-family:Georgia,serif;">&ldquo;</p>
+            <p class="text-peach text-3xl leading-none mb-2" style="font-family:'Playfair Display',serif;">&ldquo;</p>
             <p class="text-white/70 text-sm leading-relaxed mb-4">The assessment data was a game-changer. I finally understood exactly how my team perceived my decisions. Invaluable.</p>
             <div class="flex items-center gap-3">
               <img src="https://cdn.prod.website-files.com/67263eab4db468f41561a030/673cf4347e08c26f2087b4f4_Eli%20Cohen.jpeg" alt="Eli Cohen" class="w-9 h-9 rounded-full object-cover" loading="lazy"/>
@@ -627,23 +625,23 @@
       <div class="tc hidden lg:block">
         <div class="tt flex flex-col gap-4" style="--d:34s;animation-delay:-4s;">
           <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/7 flex-shrink-0">
-            <p class="text-gold text-3xl leading-none mb-2" style="font-family:Georgia,serif;">&ldquo;</p>
-            <p class="text-white/70 text-sm leading-relaxed mb-4">I thought I knew how I came across. The data showed me a completely different picture. Humbling — and incredibly freeing.</p>
+            <p class="text-peach text-3xl leading-none mb-2" style="font-family:'Playfair Display',serif;">&ldquo;</p>
+            <p class="text-white/70 text-sm leading-relaxed mb-4">I thought I knew how I came across. The data showed me a completely different picture. Humbling and incredibly freeing.</p>
             <div class="flex items-center gap-3">
               <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-xs flex-shrink-0">RK</div>
               <div><p class="text-white/75 text-xs font-semibold">Rachel K.</p><p class="text-white/30 text-xs">Senior Director</p></div>
             </div>
           </div>
           <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/7 flex-shrink-0">
-            <p class="text-gold text-3xl leading-none mb-2" style="font-family:Georgia,serif;">&ldquo;</p>
-            <p class="text-white/70 text-sm leading-relaxed mb-4">Tania doesn&rsquo;t just coach you — she shows you exactly what the people around you need from you as a leader. Nothing else compares.</p>
+            <p class="text-peach text-3xl leading-none mb-2" style="font-family:'Playfair Display',serif;">&ldquo;</p>
+            <p class="text-white/70 text-sm leading-relaxed mb-4">Tania doesn&rsquo;t just coach you. She shows you exactly what the people around you need from you as a leader. Nothing else compares.</p>
             <div class="flex items-center gap-3">
               <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-xs flex-shrink-0">MB</div>
               <div><p class="text-white/75 text-xs font-semibold">Michael B.</p><p class="text-white/30 text-xs">VP Strategy</p></div>
             </div>
           </div>
           <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/7 flex-shrink-0">
-            <p class="text-gold text-3xl leading-none mb-2" style="font-family:Georgia,serif;">&ldquo;</p>
+            <p class="text-peach text-3xl leading-none mb-2" style="font-family:'Playfair Display',serif;">&ldquo;</p>
             <p class="text-white/70 text-sm leading-relaxed mb-4">The coaching paired with the data made everything click. I have a clear development path and real momentum now.</p>
             <div class="flex items-center gap-3">
               <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-xs flex-shrink-0">SL</div>
@@ -651,7 +649,7 @@
             </div>
           </div>
           <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/7 flex-shrink-0">
-            <p class="text-gold text-3xl leading-none mb-2" style="font-family:Georgia,serif;">&ldquo;</p>
+            <p class="text-peach text-3xl leading-none mb-2" style="font-family:'Playfair Display',serif;">&ldquo;</p>
             <p class="text-white/70 text-sm leading-relaxed mb-4">I was skeptical about coaching. Three sessions later, my team noticed the difference before I even pointed it out.</p>
             <div class="flex items-center gap-3">
               <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-xs flex-shrink-0">DW</div>
@@ -660,23 +658,23 @@
           </div>
           <!-- duplicate -->
           <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/7 flex-shrink-0">
-            <p class="text-gold text-3xl leading-none mb-2" style="font-family:Georgia,serif;">&ldquo;</p>
-            <p class="text-white/70 text-sm leading-relaxed mb-4">I thought I knew how I came across. The data showed me a completely different picture. Humbling — and incredibly freeing.</p>
+            <p class="text-peach text-3xl leading-none mb-2" style="font-family:'Playfair Display',serif;">&ldquo;</p>
+            <p class="text-white/70 text-sm leading-relaxed mb-4">I thought I knew how I came across. The data showed me a completely different picture. Humbling and incredibly freeing.</p>
             <div class="flex items-center gap-3">
               <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-xs flex-shrink-0">RK</div>
               <div><p class="text-white/75 text-xs font-semibold">Rachel K.</p><p class="text-white/30 text-xs">Senior Director</p></div>
             </div>
           </div>
           <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/7 flex-shrink-0">
-            <p class="text-gold text-3xl leading-none mb-2" style="font-family:Georgia,serif;">&ldquo;</p>
-            <p class="text-white/70 text-sm leading-relaxed mb-4">Tania doesn&rsquo;t just coach you — she shows you exactly what the people around you need from you as a leader. Nothing else compares.</p>
+            <p class="text-peach text-3xl leading-none mb-2" style="font-family:'Playfair Display',serif;">&ldquo;</p>
+            <p class="text-white/70 text-sm leading-relaxed mb-4">Tania doesn&rsquo;t just coach you. She shows you exactly what the people around you need from you as a leader. Nothing else compares.</p>
             <div class="flex items-center gap-3">
               <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-xs flex-shrink-0">MB</div>
               <div><p class="text-white/75 text-xs font-semibold">Michael B.</p><p class="text-white/30 text-xs">VP Strategy</p></div>
             </div>
           </div>
           <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/7 flex-shrink-0">
-            <p class="text-gold text-3xl leading-none mb-2" style="font-family:Georgia,serif;">&ldquo;</p>
+            <p class="text-peach text-3xl leading-none mb-2" style="font-family:'Playfair Display',serif;">&ldquo;</p>
             <p class="text-white/70 text-sm leading-relaxed mb-4">The coaching paired with the data made everything click. I have a clear development path and real momentum now.</p>
             <div class="flex items-center gap-3">
               <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-xs flex-shrink-0">SL</div>
@@ -684,7 +682,7 @@
             </div>
           </div>
           <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/7 flex-shrink-0">
-            <p class="text-gold text-3xl leading-none mb-2" style="font-family:Georgia,serif;">&ldquo;</p>
+            <p class="text-peach text-3xl leading-none mb-2" style="font-family:'Playfair Display',serif;">&ldquo;</p>
             <p class="text-white/70 text-sm leading-relaxed mb-4">I was skeptical about coaching. Three sessions later, my team noticed the difference before I even pointed it out.</p>
             <div class="flex items-center gap-3">
               <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-xs flex-shrink-0">DW</div>
@@ -702,7 +700,7 @@
 <!-- ═══════════════════════════════════════
      ABOUT TANIA
 ════════════════════════════════════════ -->
-<section id="tania" class="py-24 px-6" style="background:linear-gradient(180deg,#06101f 0%,#1B3068 100%);">
+<section id="tania" class="py-24 px-6" style="background:linear-gradient(180deg,#101c35 0%,#274684 100%);">
   <div class="max-w-5xl mx-auto">
     <div class="grid md:grid-cols-2 gap-14 items-start">
 
@@ -711,8 +709,8 @@
         <div class="fg">
           <div class="fg-inner">
             <div class="fg-slide on" id="s0"><img src="Assets/671a05442676a82c04fc6fcc_about_hero.jpg" alt="Tania Friedlander" loading="lazy"/></div>
-            <div class="fg-slide"    id="s1"><img src="https://cdn.prod.website-files.com/67055e2100e44cf1dd38ad3e/672cb3d81b0b93ff7d6fa86e_tania-img_01.jpg" alt="Tania — coaching session" loading="lazy"/></div>
-            <div class="fg-slide"    id="s2"><img src="https://cdn.prod.website-files.com/67055e2100e44cf1dd38ad3e/671a175a60a3720f571cf2a4_championships-firs.jpg" alt="Tania — champion athlete" loading="lazy"/></div>
+            <div class="fg-slide"    id="s1"><img src="https://cdn.prod.website-files.com/67055e2100e44cf1dd38ad3e/672cb3d81b0b93ff7d6fa86e_tania-img_01.jpg" alt="Tania coaching session" loading="lazy"/></div>
+            <div class="fg-slide"    id="s2"><img src="https://cdn.prod.website-files.com/67055e2100e44cf1dd38ad3e/671a175a60a3720f571cf2a4_championships-firs.jpg" alt="Tania champion athlete" loading="lazy"/></div>
           </div>
         </div>
         <div style="display:flex;justify-content:center;align-items:center;gap:12px;margin-top:16px;">
@@ -726,37 +724,37 @@
 
         <!-- Credential badges -->
         <div class="mt-8 flex flex-wrap gap-2 justify-center">
-          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-gold/12 border border-gold/28 text-gold">PCC Certified</span>
+          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-peach/12 border border-peach/30 text-peach">PCC Certified</span>
           <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-gold/12 border border-gold/28 text-gold">Gallup Strengths Coach</span>
           <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-gold/12 border border-gold/28 text-gold">LL.B. British Law</span>
-          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-gold/12 border border-gold/28 text-gold">Champion Athlete</span>
+          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-peach/12 border border-peach/30 text-peach">Champion Athlete</span>
         </div>
       </div>
 
       <!-- Bio -->
       <div>
-        <p class="eyebrow mb-3">About Tania</p>
-        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,4vw,3rem);font-weight:600;color:#F9F4EF;line-height:1.15;margin-bottom:1.5rem;">
+        <p class="eyebrow mb-3" style="color:#fec9a8;">About Tania</p>
+        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4vw,3rem);font-weight:600;color:#f9efea;line-height:1.15;margin-bottom:1.5rem;">
           Everything you need to succeed is within you.
         </h2>
         <div class="space-y-4 text-white/58 text-sm leading-relaxed">
-          <p>Tania Friedlander is a PCC-certified executive coach and Gallup-certified Strengths Coach who has guided leaders at Google, Salesforce, Deloitte, and the Federal Reserve — along with 350+ other high-performing professionals.</p>
-          <p>Her path to coaching is anything but linear. A champion athlete who won gold at the Jewish Olympic Games, a British-trained lawyer, and an award-winning entrepreneur — Tania brings a rare breadth of real-world experience to every coaching engagement.</p>
-          <p>She doesn't coach from theory. She coaches from data, from lived experience, and from a deep belief that the most transformational leaders are the ones willing to look at themselves clearly — and grow from what they see.</p>
+          <p>Tania Friedlander is a PCC-certified executive coach and Gallup-certified Strengths Coach who has guided leaders at Google, Salesforce, Deloitte, and the Federal Reserve, along with 350+ other high-performing professionals.</p>
+          <p>Her path to coaching is anything but linear. A champion athlete who won gold at the Jewish Olympic Games, a British-trained lawyer, and an award-winning entrepreneur. Tania brings a rare breadth of real-world experience to every coaching engagement.</p>
+          <p>She doesn't coach from theory. She coaches from data, from lived experience, and from a deep belief that the most transformational leaders are the ones willing to look at themselves clearly and grow from what they see.</p>
         </div>
 
         <!-- Stats -->
         <div class="grid grid-cols-3 gap-4 mt-10">
           <div class="text-center p-4 rounded-xl bg-white/[0.04] border border-white/7">
-            <p style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#B5935A;line-height:1;">350+</p>
+            <p style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#fec9a8;line-height:1;">350+</p>
             <p class="text-white/40 text-xs mt-1">Clients Coached</p>
           </div>
           <div class="text-center p-4 rounded-xl bg-white/[0.04] border border-white/7">
-            <p style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:#B5935A;line-height:1.2;">PCC</p>
+            <p style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#fec9a8;line-height:1.2;">PCC</p>
             <p class="text-white/40 text-xs mt-1">ICF Certification</p>
           </div>
           <div class="text-center p-4 rounded-xl bg-white/[0.04] border border-white/7">
-            <p style="font-size:1.8rem;line-height:1.2;">🥇</p>
+            <div class="flex justify-center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c4a573" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
             <p class="text-white/40 text-xs mt-1">Champion Athlete</p>
           </div>
         </div>
@@ -770,13 +768,13 @@
 <!-- ═══════════════════════════════════════
      CTA BANNER
 ════════════════════════════════════════ -->
-<section class="py-20 px-6" style="background:linear-gradient(135deg,#B5935A 0%,#c9a46a 50%,#B5935A 100%);">
+<section class="py-20 px-6" style="background:linear-gradient(135deg,#c4a573 0%,#c9a46a 50%,#c4a573 100%);">
   <div class="max-w-2xl mx-auto text-center">
-    <p style="font-size:0.62rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:rgba(10,21,48,0.55);margin-bottom:1rem;">Ready to See Clearly?</p>
-    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;color:#0A1530;line-height:1.08;margin-bottom:1.1rem;">
+    <p style="font-size:0.62rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:rgba(16,28,53,0.55);margin-bottom:1rem;">Ready to See Clearly?</p>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;color:#101c35;line-height:1.08;margin-bottom:1.1rem;">
       Your team is ready<br>to tell you the truth.
     </h2>
-    <p style="color:rgba(10,21,48,0.65);font-size:1rem;line-height:1.6;margin-bottom:2rem;max-width:420px;margin-left:auto;margin-right:auto;">
+    <p style="color:rgba(16,28,53,0.65);font-size:1rem;line-height:1.6;margin-bottom:2rem;max-width:420px;margin-left:auto;margin-right:auto;">
       Are you ready to hear it? Book a discovery call and find out which program is the right fit for you.
     </p>
     <a href="#contact" class="btn btn-dark px-8 py-4">Book a Discovery Call &rarr;</a>
@@ -787,11 +785,11 @@
 <!-- ═══════════════════════════════════════
      CONTACT
 ════════════════════════════════════════ -->
-<section id="contact" class="py-24 px-6" style="background:#06101f;">
+<section id="contact" class="py-24 px-6" style="background:#101c35;">
   <div class="max-w-[480px] mx-auto">
     <div class="text-center mb-10">
-      <p class="eyebrow mb-3">Get in Touch</p>
-      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:600;color:#F9F4EF;margin-bottom:0.75rem;">Start the conversation</h2>
+      <p class="eyebrow mb-3" style="color:#fec9a8;">Get in Touch</p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:600;color:#f9efea;margin-bottom:0.75rem;">Start the conversation</h2>
       <p class="text-white/45 text-sm leading-relaxed">Tell us a bit about yourself and Tania will be in touch within 24 hours.</p>
     </div>
 
@@ -807,10 +805,10 @@
       <div>
         <label class="block text-[0.65rem] font-semibold text-white/40 mb-1.5 uppercase tracking-widest">Program of Interest</label>
         <select class="w-full border border-white/10 rounded-xl px-4 py-3 text-white/65 text-sm focus:outline-none focus:border-gold/45 transition-colors appearance-none" style="background-color:rgba(255,255,255,0.05);">
-          <option value="" style="background:#06101f;">Select a program</option>
-          <option value="mirror" style="background:#06101f;">The Leadership Mirror (3 Sessions)</option>
-          <option value="mastery" style="background:#06101f;">Leadership Mastery (6 Sessions)</option>
-          <option value="unsure" style="background:#06101f;">Not sure yet — let&rsquo;s talk</option>
+          <option value="" style="background:#101c35;">Select a program</option>
+          <option value="mirror" style="background:#101c35;">The Leadership Mirror (3 Sessions)</option>
+          <option value="mastery" style="background:#101c35;">Leadership Mastery (6 Sessions)</option>
+          <option value="unsure" style="background:#101c35;">Not sure yet, let&rsquo;s talk</option>
         </select>
       </div>
       <div>
@@ -836,24 +834,24 @@
 <!-- ═══════════════════════════════════════
      FOOTER
 ════════════════════════════════════════ -->
-<footer class="py-10 px-6 border-t border-white/7" style="background:#06101f;">
+<footer class="py-10 px-6 border-t border-white/7" style="background:#101c35;">
   <div class="max-w-5xl mx-auto">
     <div class="flex flex-col md:flex-row items-center justify-between gap-6">
       <a href="#" class="flex items-center gap-2.5 no-underline">
         <svg width="30" height="30" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-          <line x1="20" y1="2"  x2="20" y2="11" stroke="#B5935A" stroke-width="2.8" stroke-linecap="round"/>
-          <line x1="20" y1="29" x2="20" y2="38" stroke="#B5935A" stroke-width="2.8" stroke-linecap="round"/>
-          <line x1="2"  y1="20" x2="11" y2="20" stroke="#B5935A" stroke-width="2.8" stroke-linecap="round"/>
-          <line x1="29" y1="20" x2="38" y2="20" stroke="#B5935A" stroke-width="2.8" stroke-linecap="round"/>
-          <line x1="7"  y1="7"  x2="13" y2="13" stroke="#B5935A" stroke-width="2.8" stroke-linecap="round"/>
-          <line x1="27" y1="27" x2="33" y2="33" stroke="#B5935A" stroke-width="2.8" stroke-linecap="round"/>
-          <line x1="33" y1="7"  x2="27" y2="13" stroke="#B5935A" stroke-width="2.8" stroke-linecap="round"/>
-          <line x1="13" y1="27" x2="7"  y2="33" stroke="#B5935A" stroke-width="2.8" stroke-linecap="round"/>
-          <polygon points="20,8 22.2,18 20,23 17.8,18" fill="#B5935A"/>
+          <line x1="20" y1="2"  x2="20" y2="11" stroke="#c4a573" stroke-width="2.8" stroke-linecap="round"/>
+          <line x1="20" y1="29" x2="20" y2="38" stroke="#c4a573" stroke-width="2.8" stroke-linecap="round"/>
+          <line x1="2"  y1="20" x2="11" y2="20" stroke="#c4a573" stroke-width="2.8" stroke-linecap="round"/>
+          <line x1="29" y1="20" x2="38" y2="20" stroke="#c4a573" stroke-width="2.8" stroke-linecap="round"/>
+          <line x1="7"  y1="7"  x2="13" y2="13" stroke="#c4a573" stroke-width="2.8" stroke-linecap="round"/>
+          <line x1="27" y1="27" x2="33" y2="33" stroke="#c4a573" stroke-width="2.8" stroke-linecap="round"/>
+          <line x1="33" y1="7"  x2="27" y2="13" stroke="#c4a573" stroke-width="2.8" stroke-linecap="round"/>
+          <line x1="13" y1="27" x2="7"  y2="33" stroke="#c4a573" stroke-width="2.8" stroke-linecap="round"/>
+          <polygon points="20,8 22.2,18 20,23 17.8,18" fill="#c4a573"/>
         </svg>
         <div class="flex flex-col leading-none">
-          <span style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-weight:600;color:#F9F4EF;letter-spacing:0.06em;">higherwork</span>
-          <span style="font-family:'Inter',sans-serif;font-size:0.48rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:#B5935A;">with TANIA</span>
+          <span style="font-family:'Montserrat',sans-serif;font-size:0.95rem;font-weight:600;color:#f9efea;letter-spacing:0.06em;">higherwork</span>
+          <span style="font-family:'Pinyon Script',cursive;font-size:0.78rem;font-weight:400;letter-spacing:0.05em;color:#c4a573;">with Tania</span>
         </div>
       </a>
       <div class="flex flex-wrap gap-5 text-xs text-white/35 justify-center">
@@ -866,7 +864,7 @@
       <a href="#contact" class="btn btn-gold text-xs px-5 py-2.5">Book a Call</a>
     </div>
     <div class="mt-7 pt-6 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-3">
-      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.82rem;color:rgba(244,184,150,0.35);">Holistic coaching for soaring</p>
+      <p style="font-family:'Pinyon Script',cursive;font-size:1.2rem;color:rgba(254,201,168,0.45);">Holistic coaching for soaring</p>
       <p class="text-white/20 text-xs">&copy; 2026 higherwork with TANIA. All rights reserved.</p>
     </div>
   </div>
