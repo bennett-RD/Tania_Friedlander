@@ -38,7 +38,7 @@
 
     /* ── Nav ── */
     #main-nav { transition: background 0.4s, box-shadow 0.4s; }
-    #main-nav.scrolled { background: rgba(16,28,53,0.97) !important; backdrop-filter: blur(14px); box-shadow: 0 2px 28px rgba(0,0,0,0.4); }
+    #main-nav.scrolled { background: rgba(249,239,234,0.97) !important; backdrop-filter: blur(14px); box-shadow: 0 2px 20px rgba(16,28,53,0.08); }
 
     /* ── Buttons ── */
     .btn { position: relative; overflow: hidden; display: inline-flex; align-items: center; justify-content: center; gap: 6px; font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: 0.04em; border-radius: 50px; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; font-size: 0.875rem; }
@@ -116,49 +116,37 @@
 <!-- ═══════════════════════════════════════
      NAV
 ════════════════════════════════════════ -->
-<nav id="main-nav" class="fixed top-0 inset-x-0 z-50 px-6 py-4" style="background:rgba(16,28,53,0.15);backdrop-filter:blur(10px);">
+<nav id="main-nav" class="fixed top-0 inset-x-0 z-50 px-6 py-2 md:py-3" style="background:rgba(249,239,234,0.88);backdrop-filter:blur(10px);">
   <div class="max-w-6xl mx-auto flex items-center justify-between">
 
     <!-- Logo -->
-    <a href="#" class="flex items-center gap-2.5 no-underline">
-      <svg width="36" height="36" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-        <line x1="20" y1="2"  x2="20" y2="11" stroke="#c4a573" stroke-width="2.8" stroke-linecap="round"/>
-        <line x1="20" y1="29" x2="20" y2="38" stroke="#c4a573" stroke-width="2.8" stroke-linecap="round"/>
-        <line x1="2"  y1="20" x2="11" y2="20" stroke="#c4a573" stroke-width="2.8" stroke-linecap="round"/>
-        <line x1="29" y1="20" x2="38" y2="20" stroke="#c4a573" stroke-width="2.8" stroke-linecap="round"/>
-        <line x1="7"  y1="7"  x2="13" y2="13" stroke="#c4a573" stroke-width="2.8" stroke-linecap="round"/>
-        <line x1="27" y1="27" x2="33" y2="33" stroke="#c4a573" stroke-width="2.8" stroke-linecap="round"/>
-        <line x1="33" y1="7"  x2="27" y2="13" stroke="#c4a573" stroke-width="2.8" stroke-linecap="round"/>
-        <line x1="13" y1="27" x2="7"  y2="33" stroke="#c4a573" stroke-width="2.8" stroke-linecap="round"/>
-        <polygon points="20,8 22.2,18 20,23 17.8,18" fill="#c4a573"/>
-      </svg>
-      <div class="flex flex-col leading-none">
-        <span style="font-family:'Montserrat',sans-serif;font-size:1.05rem;font-weight:600;color:#f9efea;letter-spacing:0.06em;">higherwork</span>
-        <span style="font-family:'Pinyon Script',cursive;font-size:0.85rem;font-weight:400;letter-spacing:0.05em;color:#c4a573;">with Tania</span>
-      </div>
+    <a href="#" class="flex items-center no-underline" aria-label="higherwork with Tania">
+      <img src="Assets/from-tania/nav-logo.png"
+           alt="higherwork with Tania"
+           class="h-12 md:h-20 w-auto block" />
     </a>
 
     <!-- Desktop links -->
     <div class="hidden md:flex items-center gap-8">
-      <a href="#assessment" class="text-sm text-white/60 hover:text-gold transition-colors">The Assessment</a>
-      <a href="#offers"     class="text-sm text-white/60 hover:text-gold transition-colors">Programs</a>
-      <a href="#tania"      class="text-sm text-white/60 hover:text-gold transition-colors">About Tania</a>
-      <a href="#contact"    class="btn btn-peach text-sm px-5 py-2.5">Book a Discovery Call</a>
+      <a href="#assessment" class="text-sm hover:text-gold transition-colors" style="color:rgba(16,28,53,0.70);">The Assessment</a>
+      <a href="#offers"     class="text-sm hover:text-gold transition-colors" style="color:rgba(16,28,53,0.70);">Programs</a>
+      <a href="#tania"      class="text-sm hover:text-gold transition-colors" style="color:rgba(16,28,53,0.70);">About Tania</a>
+      <a href="#contact"    class="btn btn-dark text-sm px-5 py-2.5">Book a Discovery Call</a>
     </div>
 
     <!-- Mobile hamburger -->
-    <button class="md:hidden p-2 text-white/70" onclick="document.getElementById('mob').classList.toggle('hidden')" aria-label="Menu">
+    <button class="md:hidden p-2" style="color:rgba(16,28,53,0.75);" onclick="document.getElementById('mob').classList.toggle('hidden')" aria-label="Menu">
       <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h16M3 12h16M3 18h16"/></svg>
     </button>
   </div>
 
   <!-- Mobile menu -->
-  <div id="mob" class="hidden md:hidden mt-3 pb-4 border-t border-white/10 pt-4">
+  <div id="mob" class="hidden md:hidden mt-3 pb-4 pt-4" style="border-top:1px solid rgba(16,28,53,0.10);">
     <div class="flex flex-col gap-5 px-2">
-      <a href="#assessment" class="text-sm text-white/65 hover:text-gold" onclick="document.getElementById('mob').classList.add('hidden')">The Assessment</a>
-      <a href="#offers"     class="text-sm text-white/65 hover:text-gold" onclick="document.getElementById('mob').classList.add('hidden')">Programs</a>
-      <a href="#tania"      class="text-sm text-white/65 hover:text-gold" onclick="document.getElementById('mob').classList.add('hidden')">About Tania</a>
-      <a href="#contact"    class="btn btn-peach text-sm"                  onclick="document.getElementById('mob').classList.add('hidden')">Book a Discovery Call</a>
+      <a href="#assessment" class="text-sm hover:text-gold" style="color:rgba(16,28,53,0.70);" onclick="document.getElementById('mob').classList.add('hidden')">The Assessment</a>
+      <a href="#offers"     class="text-sm hover:text-gold" style="color:rgba(16,28,53,0.70);" onclick="document.getElementById('mob').classList.add('hidden')">Programs</a>
+      <a href="#tania"      class="text-sm hover:text-gold" style="color:rgba(16,28,53,0.70);" onclick="document.getElementById('mob').classList.add('hidden')">About Tania</a>
+      <a href="#contact"    class="btn btn-dark text-sm"                                                          onclick="document.getElementById('mob').classList.add('hidden')">Book a Discovery Call</a>
     </div>
   </div>
 </nav>
@@ -167,17 +155,18 @@
 <!-- ═══════════════════════════════════════
      HERO
 ════════════════════════════════════════ -->
-<section class="relative min-h-screen flex items-center overflow-hidden" style="background:linear-gradient(140deg,#060e25 0%,#0f1e45 45%,#1b3068 100%);">
+<section class="relative min-h-screen flex items-start md:items-center overflow-hidden" style="background:linear-gradient(140deg,#060e25 0%,#0f1e45 45%,#1b3068 100%);">
 
   <!-- Subtle dot grid -->
   <div class="absolute inset-0 opacity-[0.04]" style="background-image:radial-gradient(#c4a573 1px,transparent 1px);background-size:52px 52px;"></div>
 
   <!-- Tania photo — right side -->
-  <div class="absolute right-0 top-0 bottom-0 w-full md:w-[56%] pointer-events-none select-none">
-    <img src="Assets/671a05442676a82c04fc6fcc_about_hero.jpg"
+  <div class="absolute right-0 bottom-0 w-full md:w-[56%] pointer-events-none select-none top-[400px] md:top-[140px]">
+    <img src="Assets/from-tania/Main%20Photo.jpg"
          alt="Tania Friedlander"
          fetchpriority="high"
-         class="w-full h-full object-cover object-center" />
+         class="w-full h-full object-cover"
+         style="object-position:65% 18%;" />
     <!-- Gradient fades — no box or border -->
     <div class="absolute inset-0" style="background:linear-gradient(to right,#060e25 0%,#060e25 4%,rgba(6,14,37,0.88) 22%,rgba(6,14,37,0.45) 48%,transparent 72%);"></div>
     <div class="absolute inset-0" style="background:linear-gradient(to top,#060e25 0%,rgba(6,14,37,0.55) 22%,transparent 46%);"></div>
@@ -185,35 +174,35 @@
   </div>
 
   <!-- Hero copy -->
-  <div class="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-24 w-full">
+  <div class="relative z-10 max-w-6xl mx-auto px-6 pt-20 md:pt-32 pb-10 md:pb-24 w-full">
     <div class="max-w-[560px]">
 
       <!-- Eyebrow pill -->
-      <div class="inline-flex items-center gap-2 mb-7 px-3.5 py-1.5 rounded-full border border-peach/35 bg-peach/10">
+      <div class="inline-flex items-center gap-2 mb-4 md:mb-7 px-3.5 py-1.5 rounded-full border border-peach/35 bg-peach/10">
         <span class="w-1.5 h-1.5 rounded-full bg-peach flex-shrink-0"></span>
         <span class="eyebrow" style="font-size:0.58rem;color:#fec9a8;">Leadership 360° Assessment</span>
       </div>
 
       <!-- Headline -->
-      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(1.9rem,6vw,4.8rem);font-weight:700;line-height:1.08;color:#f9efea;margin-bottom:1.4rem;">
+      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(1.7rem,4.5vw,3.5rem);font-weight:700;line-height:1.1;color:#f9efea;margin-bottom:1.4rem;">
         Do you know how<br>
         your team truly<br>
         <span class="rword in" id="rword">experiences you?</span>
       </h1>
 
       <!-- Sub -->
-      <p class="text-white/60 leading-relaxed mb-9" style="font-size:clamp(0.95rem,2vw,1.08rem);max-width:420px;">
+      <p class="text-white/60 leading-relaxed mb-5 md:mb-9" style="font-size:clamp(0.9rem,2vw,1.08rem);max-width:420px;">
         Most leaders don't. The gap between how you see yourself and how your team experiences you is exactly where your greatest growth lives.
       </p>
 
       <!-- CTAs -->
-      <div class="flex flex-wrap gap-4 mb-10">
-        <a href="#offers"     class="btn btn-gold">See the Programs &rarr;</a>
-        <a href="#assessment" class="btn btn-outline">About the Assessment</a>
+      <div class="flex flex-nowrap gap-2.5 md:gap-4 mb-6 md:mb-10">
+        <a href="#offers"     class="btn btn-gold whitespace-nowrap text-[0.72rem] md:text-sm !px-3.5 md:!px-7 !py-2.5 md:!py-3.5">See the Programs &rarr;</a>
+        <a href="#assessment" class="btn btn-outline whitespace-nowrap text-[0.72rem] md:text-sm !px-3 md:!px-7 !py-2.5 md:!py-3.5">About the Assessment</a>
       </div>
 
       <!-- Pills -->
-      <div class="flex flex-wrap gap-2">
+      <div class="hidden md:flex flex-wrap gap-2">
         <span class="px-3 py-1 rounded-full text-xs font-medium bg-white/7 border border-white/10 text-white/55">Data-Driven</span>
         <span class="px-3 py-1 rounded-full text-xs font-medium bg-white/7 border border-white/10 text-white/55">Anonymous Feedback</span>
         <span class="px-3 py-1 rounded-full text-xs font-medium bg-white/7 border border-white/10 text-white/55 basis-full sm:basis-auto">PCC Certified Coach</span>
@@ -284,6 +273,88 @@
         <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:600;color:#fec9a8;margin-bottom:0.6rem;">Coaching Without Context</h3>
         <p class="text-white/50 text-sm leading-relaxed">Generic development plans don't move the needle. Real growth requires knowing exactly where you stand, and where others need you to be.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     ABOUT TANIA
+════════════════════════════════════════ -->
+<section id="tania" class="py-24 px-6" style="background:linear-gradient(180deg,#101c35 0%,#274684 100%);">
+  <div class="max-w-5xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-14 items-start">
+
+      <!-- Flip Gallery -->
+      <div>
+        <div class="fg">
+          <div class="fg-inner">
+            <div class="fg-slide on" id="s0"><img src="Assets/from-tania/_TWP2635.jpg" alt="Tania Friedlander coaching session" loading="lazy"/></div>
+            <div class="fg-slide"    id="s1"><img src="Assets/from-tania/DSC04593.JPG" alt="Tania Friedlander at her desk" loading="lazy"/></div>
+            <div class="fg-slide"    id="s2"><img src="Assets/from-tania/_TWP2753.jpg" alt="Tania Friedlander in her office" loading="lazy"/></div>
+            <div class="fg-slide"    id="s3"><img src="Assets/from-tania/DSC04445.JPG" alt="Tania Friedlander recording" loading="lazy"/></div>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:center;align-items:center;gap:12px;margin-top:16px;">
+          <button class="fg-arr" onclick="fgPrev()">&lsaquo;</button>
+          <button class="fg-dot on" id="d0" onclick="fgGo(0)"></button>
+          <button class="fg-dot"    id="d1" onclick="fgGo(1)"></button>
+          <button class="fg-dot"    id="d2" onclick="fgGo(2)"></button>
+          <button class="fg-dot"    id="d3" onclick="fgGo(3)"></button>
+          <button class="fg-arr" onclick="fgNext()">&rsaquo;</button>
+        </div>
+        <div id="fg-cap" style="text-align:center;font-size:0.7rem;color:rgba(255,255,255,0.3);margin-top:8px;min-height:1.1em;font-family:'Inter',sans-serif;"></div>
+
+        <!-- Certification badges -->
+        <p class="text-center eyebrow mt-8 mb-3" style="color:rgba(254,201,168,0.7);">Certifications</p>
+        <div class="flex flex-wrap gap-2.5 items-center justify-center">
+          <div class="rounded-xl flex items-center px-3" style="background:#f9efea;height:56px;">
+            <img src="Assets/from-tania/icflogocolor.jpg" alt="ICF International Coach Federation" class="block" style="height:30px;width:auto;"/>
+          </div>
+          <div class="rounded-xl flex items-center px-3" style="background:#f9efea;height:56px;">
+            <img src="Assets/from-tania/CredentialBadges_PCC.png" alt="PCC Professional Certified Coach" class="block" style="height:42px;width:auto;"/>
+          </div>
+          <div class="rounded-xl flex items-center px-3" style="background:#f9efea;height:56px;">
+            <img src="Assets/from-tania/CPCC_Logo_BlackText.png" alt="CPCC Certified Professional Co-Active Coach" class="block" style="height:42px;width:auto;"/>
+          </div>
+          <div class="rounded-xl flex items-center px-3" style="background:#f9efea;height:56px;">
+            <img src="Assets/from-tania/leadership-circle.png" alt="Leadership Circle Certified Practitioner" class="block" style="height:38px;width:auto;"/>
+          </div>
+          <div class="rounded-xl flex items-center px-3" style="background:#f9efea;height:56px;">
+            <img src="Assets/from-tania/prosci-certified.png" alt="Prosci Certified Change Practitioner" class="block" style="height:44px;width:auto;"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bio -->
+      <div>
+        <p class="eyebrow mb-3" style="color:#fec9a8;">About Tania</p>
+        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4vw,3rem);font-weight:600;color:#f9efea;line-height:1.15;margin-bottom:1.5rem;">
+          Everything you need to succeed is within you.
+        </h2>
+        <div class="space-y-4 text-white/58 text-sm leading-relaxed">
+          <p>Tania Friedlander is a PCC-certified executive coach and Gallup-certified Strengths Coach who has guided leaders at Google, Salesforce, Deloitte, and the Federal Reserve, along with 350+ other high-performing professionals.</p>
+          <p>Her path to coaching is anything but linear. A champion athlete who won gold at the Jewish Olympic Games, a British-trained lawyer, and an award-winning entrepreneur. Tania brings a rare breadth of real-world experience to every coaching engagement.</p>
+          <p>She doesn't coach from theory. She coaches from data, from lived experience, and from a deep belief that the most transformational leaders are the ones willing to look at themselves clearly and grow from what they see.</p>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-4 mt-10">
+          <div class="text-center p-4 rounded-xl bg-white/[0.04] border border-white/7">
+            <p style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#fec9a8;line-height:1;">350+</p>
+            <p class="text-white/40 text-xs mt-1">Clients Coached</p>
+          </div>
+          <div class="text-center p-4 rounded-xl bg-white/[0.04] border border-white/7">
+            <p style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#fec9a8;line-height:1.2;">PCC</p>
+            <p class="text-white/40 text-xs mt-1">ICF Certification</p>
+          </div>
+          <div class="text-center p-4 rounded-xl bg-white/[0.04] border border-white/7">
+            <div class="flex justify-center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c4a573" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+            <p class="text-white/40 text-xs mt-1">Champion Athlete</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -407,6 +478,65 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     REAL RESULTS
+════════════════════════════════════════ -->
+<section class="py-20 px-6" style="background:#0c1730;">
+  <div class="max-w-5xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <img src="Assets/from-tania/_TWP8751.jpg"
+             alt="Tania Friedlander"
+             class="w-full rounded-3xl object-cover shadow-2xl"
+             style="aspect-ratio:3/4;object-position:center;" />
+      </div>
+      <div>
+        <p class="eyebrow mb-2">Real Results</p>
+        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:600;color:#f9efea;line-height:1.15;margin-bottom:0.6rem;">Real results for real leaders</h2>
+        <p class="text-white/55 text-sm leading-relaxed mb-6 max-w-md">What changes when you finally see how your team experiences you.</p>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <span class="text-gold flex-shrink-0" style="margin-top:0.25rem;font-size:0.95rem;">✦</span>
+            <div>
+              <h3 style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:#f9efea;margin-bottom:0.15rem;">A Clear View</h3>
+              <p class="text-white/55 text-sm leading-snug">See exactly how your team experiences you, with real evidence instead of guesswork.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-gold flex-shrink-0" style="margin-top:0.25rem;font-size:0.95rem;">✦</span>
+            <div>
+              <h3 style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:#f9efea;margin-bottom:0.15rem;">Confident Decisions</h3>
+              <p class="text-white/55 text-sm leading-snug">Move forward with conviction, backed by data rather than gut feel.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-gold flex-shrink-0" style="margin-top:0.25rem;font-size:0.95rem;">✦</span>
+            <div>
+              <h3 style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:#f9efea;margin-bottom:0.15rem;">Blind Spots Surfaced</h3>
+              <p class="text-white/55 text-sm leading-snug">Discover the patterns you couldn't see, then turn them into focused growth.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-gold flex-shrink-0" style="margin-top:0.25rem;font-size:0.95rem;">✦</span>
+            <div>
+              <h3 style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:#f9efea;margin-bottom:0.15rem;">Stronger Team Trust</h3>
+              <p class="text-white/55 text-sm leading-snug">Earn deeper engagement when your team sees you act on what they shared.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-gold flex-shrink-0" style="margin-top:0.25rem;font-size:0.95rem;">✦</span>
+            <div>
+              <h3 style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:#f9efea;margin-bottom:0.15rem;">Measurable Progress</h3>
+              <p class="text-white/55 text-sm leading-snug">Leave with a clear plan and the tools to track real change over time.</p>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -698,74 +828,6 @@
 
 
 <!-- ═══════════════════════════════════════
-     ABOUT TANIA
-════════════════════════════════════════ -->
-<section id="tania" class="py-24 px-6" style="background:linear-gradient(180deg,#101c35 0%,#274684 100%);">
-  <div class="max-w-5xl mx-auto">
-    <div class="grid md:grid-cols-2 gap-14 items-start">
-
-      <!-- Flip Gallery -->
-      <div>
-        <div class="fg">
-          <div class="fg-inner">
-            <div class="fg-slide on" id="s0"><img src="Assets/671a05442676a82c04fc6fcc_about_hero.jpg" alt="Tania Friedlander" loading="lazy"/></div>
-            <div class="fg-slide"    id="s1"><img src="https://cdn.prod.website-files.com/67055e2100e44cf1dd38ad3e/672cb3d81b0b93ff7d6fa86e_tania-img_01.jpg" alt="Tania coaching session" loading="lazy"/></div>
-            <div class="fg-slide"    id="s2"><img src="https://cdn.prod.website-files.com/67055e2100e44cf1dd38ad3e/671a175a60a3720f571cf2a4_championships-firs.jpg" alt="Tania champion athlete" loading="lazy"/></div>
-          </div>
-        </div>
-        <div style="display:flex;justify-content:center;align-items:center;gap:12px;margin-top:16px;">
-          <button class="fg-arr" onclick="fgPrev()">&lsaquo;</button>
-          <button class="fg-dot on" id="d0" onclick="fgGo(0)"></button>
-          <button class="fg-dot"    id="d1" onclick="fgGo(1)"></button>
-          <button class="fg-dot"    id="d2" onclick="fgGo(2)"></button>
-          <button class="fg-arr" onclick="fgNext()">&rsaquo;</button>
-        </div>
-        <div id="fg-cap" style="text-align:center;font-size:0.7rem;color:rgba(255,255,255,0.3);margin-top:8px;min-height:1.1em;font-family:'Inter',sans-serif;"></div>
-
-        <!-- Credential badges -->
-        <div class="mt-8 flex flex-wrap gap-2 justify-center">
-          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-peach/12 border border-peach/30 text-peach">PCC Certified</span>
-          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-gold/12 border border-gold/28 text-gold">Gallup Strengths Coach</span>
-          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-gold/12 border border-gold/28 text-gold">LL.B. British Law</span>
-          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-peach/12 border border-peach/30 text-peach">Champion Athlete</span>
-        </div>
-      </div>
-
-      <!-- Bio -->
-      <div>
-        <p class="eyebrow mb-3" style="color:#fec9a8;">About Tania</p>
-        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4vw,3rem);font-weight:600;color:#f9efea;line-height:1.15;margin-bottom:1.5rem;">
-          Everything you need to succeed is within you.
-        </h2>
-        <div class="space-y-4 text-white/58 text-sm leading-relaxed">
-          <p>Tania Friedlander is a PCC-certified executive coach and Gallup-certified Strengths Coach who has guided leaders at Google, Salesforce, Deloitte, and the Federal Reserve, along with 350+ other high-performing professionals.</p>
-          <p>Her path to coaching is anything but linear. A champion athlete who won gold at the Jewish Olympic Games, a British-trained lawyer, and an award-winning entrepreneur. Tania brings a rare breadth of real-world experience to every coaching engagement.</p>
-          <p>She doesn't coach from theory. She coaches from data, from lived experience, and from a deep belief that the most transformational leaders are the ones willing to look at themselves clearly and grow from what they see.</p>
-        </div>
-
-        <!-- Stats -->
-        <div class="grid grid-cols-3 gap-4 mt-10">
-          <div class="text-center p-4 rounded-xl bg-white/[0.04] border border-white/7">
-            <p style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#fec9a8;line-height:1;">350+</p>
-            <p class="text-white/40 text-xs mt-1">Clients Coached</p>
-          </div>
-          <div class="text-center p-4 rounded-xl bg-white/[0.04] border border-white/7">
-            <p style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#fec9a8;line-height:1.2;">PCC</p>
-            <p class="text-white/40 text-xs mt-1">ICF Certification</p>
-          </div>
-          <div class="text-center p-4 rounded-xl bg-white/[0.04] border border-white/7">
-            <div class="flex justify-center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c4a573" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
-            <p class="text-white/40 text-xs mt-1">Champion Athlete</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════
      CTA BANNER
 ════════════════════════════════════════ -->
 <section class="py-20 px-6" style="background:linear-gradient(135deg,#c4a573 0%,#c9a46a 50%,#c4a573 100%);">
@@ -909,8 +971,8 @@ window.addEventListener('scroll', function () {
 })();
 
 // ── Flip Gallery
-var fgCur = 0, fgMax = 3;
-var fgCaps = ['Tania Friedlander', 'In a coaching session', 'Champion athlete'];
+var fgCur = 0, fgMax = 4;
+var fgCaps = ['In a coaching session', 'Working with a client', 'In her studio', 'On the mic'];
 var fgTimer;
 
 function fgGo(n) {
